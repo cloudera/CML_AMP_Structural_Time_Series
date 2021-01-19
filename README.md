@@ -6,7 +6,7 @@ It provides an example application of generalized additive models (via the [Prop
 The primary output of this repository is a small application exposing a probablistic forecast and interface for asking a probabilistic question against it.
 The final app looks like this.
 
-<img src="img/app.png" alt="Forecasting app interface" width="40%">
+![Forecasting app interface](img/app.png)
 
 Instructions are given both for general use (on a laptop, say), and for Cloudera CML and CDSW.
 We'll first describe what's here, then go through how to run everything.
@@ -83,11 +83,11 @@ apps
 The diagnostic application serves two purposes.
 First, it computes and reports top level metrics for any forecasts saved in the `data/forecasts` directory.
 
-<img src="img/diagnostic-metrics.png" alt="Diagnostic app showing model metrics" width="40%">
+![Diagnostic app showing model metrics](img/diagnostic-metrics.png)
 
 Second, it provides a few diagnostic charts, including a zoomable forecast.
 
-<img src="img/diagnostic-chart.png" alt="Diagnostic app showing chart of forecast" width="40%">
+![Diagnostic app showing chart of forecast](img/diagnostic-chart.png)
 
 #### Forecast
 
