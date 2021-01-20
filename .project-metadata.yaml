@@ -8,7 +8,7 @@ api_version: 1
 
 environment_variables:
   EIA_API_KEY:
-    default: "EIA KEY"
+    default: ""
     description: "Optional EIA open data API key"
     prompt_user: false
 
