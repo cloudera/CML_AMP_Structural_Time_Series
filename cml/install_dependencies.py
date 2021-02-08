@@ -39,4 +39,5 @@
 # ###########################################################################
 
 !pip3  install -r requirements.txt
+!pip3 install fbprophet==0.6.0
 !pip3 install -e .
