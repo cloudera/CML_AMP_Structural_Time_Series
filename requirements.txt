@@ -1,4 +1,6 @@
 convertdate==2.3.2
+cmdstanpy==0.9.76
+Cython==0.29.24
 holidays==0.11.2
 lunarcalendar==0.0.9
 plotly==4.9.0
