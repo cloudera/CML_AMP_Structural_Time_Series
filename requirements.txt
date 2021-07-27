@@ -4,3 +4,4 @@ lunarcalendar==0.0.9
 plotly==4.9.0
 pystan~=2.19.1.1
 streamlit==0.66.0
+tqdm==4.61.2
