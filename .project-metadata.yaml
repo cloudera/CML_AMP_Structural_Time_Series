@@ -10,6 +10,7 @@ runtimes:
   - editor: Workbench
     kernel: Python 3.6
     edition: Standard
+    version: 2021.06
 
 engine_images:
   - image_name: engine
@@ -23,22 +24,13 @@ environment_variables:
     prompt_user: false
 
 tasks:
-  - type: create_job
+  - type: run_session
     name: Install Dependencies
-    entity_label: install_dependencies
     script: cml/install_dependencies.py
-    arguments: None
     cpu: 2
     memory: 4
-    short_summary: Create job to install project dependencies.
-    environment:
-      TASK_TYPE: CREATE/RUN_JOB
+    short_summary: Install project dependencies.
     kernel: python3
-
-  - type: run_job
-    entity_label: install_dependencies
-    short_summary: Running install dependencies job.
-    long_summary: Running the job to install dependencies.  Note that this requires at least 4GB of memory
 
   - type: create_job
     name: Launch Parallel Model Fitting
