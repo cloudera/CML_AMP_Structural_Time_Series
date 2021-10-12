@@ -38,7 +38,7 @@
 #
 # ###########################################################################
 
-from fbprophet import Prophet
+from prophet import Prophet
 
 
 def default_prophet_model(df):

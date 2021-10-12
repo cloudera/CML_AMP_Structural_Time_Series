@@ -6,6 +6,17 @@ prototype_version: 1.0
 date: "2020-10-14"
 api_version: 1
 
+runtimes:
+  - editor: Workbench
+    kernel: Python 3.7
+    edition: Standard
+    version: 2021.09
+
+engine_images:
+  - image_name: engine
+    tags:
+      - 14-cml-2021.05-1
+
 environment_variables:
   EIA_API_KEY:
     default: ""
@@ -28,7 +39,7 @@ tasks:
   - type: run_job
     entity_label: install_dependencies
     short_summary: Running install dependencies job.
-    long_summary: Running the job to install dependencies.  Note that this requires at least 4GB of memory
+    long_summary: Running the job to install dependencies.  Note that this requires at least 4GB of memory, and takes several minutes.
 
   - type: create_job
     name: Launch Parallel Model Fitting
