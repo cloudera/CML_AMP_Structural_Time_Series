@@ -81,7 +81,7 @@ prediction_df = (
     .merge(pd.DataFrame(predictions), left_index=True, right_index=True)
     .drop(['winter_weekday', 'winter_weekend', 'summer_weekday', 'summer_weekend'],
           axis='columns')
-    [future.ds.dt.date >= datetime.date.today()]
+    .tail(24*365) # keep one year of hourly predictions from most recent training date
 )
 
 
