@@ -99,12 +99,12 @@ There are three ways to launch this project on CML:
 
 ### Installation
 
-The code and applications within were developed against Python 3.6.9, and are likely also to function with more recent versions of Python.
+The code and applications within were developed against Python 3.7, and are likely also to function with more recent versions of Python.
 In CML or CDSW, start a Python 3 session (with at least 2 vCPU / 4 GiB Memory), and run
 
 ```python
 !pip3 install -r requirements.txt     # notice `pip3`, not `pip`
-!pip3 install fbprophet==0.6.0
+!pip3 install prophet==1.1.5
 ```
 
 Next, install the `sts` module from this repository, with

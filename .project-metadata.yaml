@@ -8,9 +8,9 @@ api_version: 1
 
 runtimes:
   - editor: Workbench
-    kernel: Python 3.6
+    kernel: Python 3.7
     edition: Standard
-    version: 2021.06
+    version: 2021.09
 
 engine_images:
   - image_name: engine
