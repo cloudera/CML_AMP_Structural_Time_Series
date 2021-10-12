@@ -24,13 +24,22 @@ environment_variables:
     prompt_user: false
 
 tasks:
-  - type: run_session
+  - type: create_job
     name: Install Dependencies
+    entity_label: install_dependencies
     script: cml/install_dependencies.py
+    arguments: None
     cpu: 2
     memory: 4
-    short_summary: Install project dependencies.
+    short_summary: Create job to install project dependencies.
+    environment:
+      TASK_TYPE: CREATE/RUN_JOB
     kernel: python3
+
+  - type: run_job
+    entity_label: install_dependencies
+    short_summary: Running install dependencies job.
+    long_summary: Running the job to install dependencies.  Note that this requires at least 4GB of memory, and takes several minutes.
 
   - type: create_job
     name: Launch Parallel Model Fitting
