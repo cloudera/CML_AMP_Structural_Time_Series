@@ -11,8 +11,6 @@ runtimes:
     edition: Standard
     version: 2021.09
 
-engine_images:
-
 environment_variables:
   EIA_API_KEY:
     default: ""
