@@ -5,7 +5,7 @@ holidays
 lunarcalendar
 pandas
 plotly
-pystan~=2.19.1.1
+pystan
 statsmodels
 streamlit
 tqdm
