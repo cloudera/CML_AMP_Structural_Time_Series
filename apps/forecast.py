@@ -104,7 +104,6 @@ generating_chart = st.text("Generating chart")
 mean_forecast = mean(subset)
 sample_forecasts = samples(subset)
 
-
 line_chart = px.line(
     sample_forecasts,
     x='ds',
@@ -132,18 +131,19 @@ generating_chart.text("")
 # Marginal plot of sum of values over interval
 
 data_sum = subset.sum()
-_min = float(data_sum.min())
-_max = float(data_sum.max())
+_min = int(data_sum.min())
+_max = int(data_sum.max())
 
 st.markdown(f"""
     The mean estimate of the aggregate demand from {start_date} to {end_date}
     is **{data_sum.mean():.2e}** Megawatt-hours.
 """)
 
-st.markdown("""
+st.markdown(f"""
     We can assess the probability of exceeding a given aggregate demand over
     the selected period. Choose the threshold of interest below.
 """)
+
 
 threshold = st.slider(
     "Threshold (Megawatt-hours)",
@@ -166,6 +166,7 @@ st.markdown("""
     The higher the count for a given demand, the more likely that future is.
 """)
 
+
 hist = px.histogram(
     data_sum[data_sum > threshold],
     title="Possible total electricity demand levels",
@@ -178,3 +179,4 @@ hist.update_layout(
     yaxis_title="Count (of 1000 simulated futures)"
 )
 st.plotly_chart(hist)
+
