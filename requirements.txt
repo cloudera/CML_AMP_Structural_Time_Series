@@ -1,3 +1,4 @@
+altair<5 #need to pin altair version when using steamlit<1.23.0
 convertdate==2.4.0
 cmdstanpy==0.9.68
 Cython==0.29.28
