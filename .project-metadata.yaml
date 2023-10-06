@@ -7,9 +7,8 @@ date: "2022-04-06"
 
 runtimes:
   - editor: Workbench
-    kernel: Python 3.8
+    kernel: Python 3.9
     edition: Standard
-    version: 2021.12
 
 environment_variables:
   EIA_API_KEY:
