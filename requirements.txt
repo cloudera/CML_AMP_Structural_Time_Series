@@ -1,12 +1,13 @@
 altair<5 #need to pin altair version when using steamlit<1.23.0
 convertdate==2.4.0
-cmdstanpy==0.9.68
+cmdstanpy==1.2.0
 Cython==0.29.28
-holidays==0.13
+holidays==0.40
 lunarcalendar==0.0.9
 pandas==1.4.2
 plotly==5.7.0
-pystan==2.19.1.1
 statsmodels==0.13.2
 streamlit==1.10.0
 tqdm==4.64.0
+Cython==0.29.28
+numpy<1.23.0
