@@ -40,7 +40,7 @@
 
 import os
 import time
-import cml
+import cml.workers_v1 as workers
 
 
 def fit_models_parallel():
@@ -60,7 +60,7 @@ def fit_models_parallel():
                script for script in scripts if script[0:3] in ['fit', 'mak']]
 
     for script in scripts:
-        cml.launch_workers(n=1, cpu=1, memory=3, script=script)
+        workers.launch_workers(n=1, cpu=1, memory=3, script=script)
 
     # Force session to persist until each worker job has completed
     # Check for completion every minute
@@ -71,7 +71,7 @@ def fit_models_parallel():
 
         time.sleep(60)
 
-        workers = cml.list_workers()
+        workers = workers.list_workers()
         workers_status = [wkr['status'] for wkr in workers]
 
         if all(status == 'succeeded' for status in workers_status):
