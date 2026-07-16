@@ -57,7 +57,7 @@ st.title("California Electricity Demand Forecast")
 data_loading = st.text("Loading data...")
 
 
-@st.cache(allow_output_mutation=True)
+@st.cache_data
 def load_data():
     data = pd.read_csv("data/forecast.csv", parse_dates=["ds"])
     data = data.set_index("ds")
@@ -82,12 +82,12 @@ subset = data[(data.index.date >= start_date) &
 data_loading.text("")
 
 
-@st.cache(hash_funcs={pd.DataFrame: lambda _: None})
+@st.cache_data
 def samples(df):
     return df.sample(N_SAMPLES, axis="columns").reset_index().melt(id_vars='ds')
 
 
-@st.cache(hash_funcs={pd.DataFrame: lambda _: None})
+@st.cache_data
 def mean(df):
     return df.mean(axis="columns")
 
