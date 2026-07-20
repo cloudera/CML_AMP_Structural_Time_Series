@@ -70,7 +70,7 @@ def read_forecast(filename):
     return df
 
 
-@st.cache(allow_output_mutation=True)
+@st.cache_data
 def load_all_forecasts():
     df = load_california_electricity_demand().sort_values("ds")
     forecast_list = os.listdir(FORECAST_DIRECTORY)

@@ -56,7 +56,7 @@ from sts.data.loader import load_california_electricity_demand
 df = load_california_electricity_demand()
 
 # Restrict to pre-2020 for evaluation on 2020
-train_df = df[df.ds.dt.year < 2020]
+train_df = df[df.ds.dt.year < 2020].copy()
 
 # Take log transform for fully multiplicative model
 train_df['y'] = train_df.y.apply(np.log)
@@ -70,7 +70,7 @@ model = seasonal_daily_prophet_model(train_df)
 # Make predictions for one year ahead of most recent training data
 
 future = add_season_weekday_indicators(
-    model.make_future_dataframe(periods=24*365, freq='H')
+    model.make_future_dataframe(periods=24*365, freq='h')
 )
 
 forecast = model.predict(future)

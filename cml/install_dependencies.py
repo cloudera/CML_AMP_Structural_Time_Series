@@ -39,5 +39,5 @@
 # ###########################################################################
 
 !pip3 install -r requirements.txt
-!pip3 install prophet==1.1.5
+!pip3 install prophet==1.1.6
 !pip3 install -e .
